@@ -62,33 +62,33 @@ frame-182_06m01s361ms.png
 
 ```text
 Use case: illustration-story.
-One horizontal 16:9 YouTube frame. Intentionally crude beginner MS Paint
-drawing, wobbly thick uneven black outlines, basic shapes, flat bucket-fill
-colors, pure white background. All subjects use this same crude visual language.
-When people are included in the planned composition, use simple round heads,
-dot eyes, black stick bodies and limbs, and basic expressions and gestures.
-A person may lead the shot or support an environmental scene as an observer,
-scale reference, interaction partner or visual joke. Follow the planned role,
-size and position; people are neither required nor banned by narration wording.
-Vivid saturated colors with a clear primary focal area and quieter
-supporting colors. Build a readable action scene with connected props
-when the narration calls for one. Scene density follows the specific
-composition; do not shrink everything into a tiny isolated icon.
-Keep important faces, hands, labels and contact points fully visible.
-Flat 2D; no gradients, shading, texture, 3D or cinematic lighting.
-Amateur, funny and deliberately awkward, not polished illustration.
-No narration subtitles, timestamps, extra labels or decorative objects.
+One horizontal 16:9 YouTube frame. Clean hand-inked cartoon in a cute chibi style:
+confident black ink outlines with a slight hand-drawn wobble, big heads and small
+bodies, flat soft colors with only light cel shading, mostly white background.
+When a location matters, add a light, simplified background that stays paler than
+the foreground subjects. No stick figures.
+Follow the "Cast in this frame" list exactly: draw only the listed characters, with
+the stated action, expression and sunglasses style. The recurring cast always wears
+sunglasses. Other people use the same chibi style but must look clearly different
+from the recurring cast. Characters may lead the shot or support it as observers,
+scale references or a visual joke; follow the planned role, size and position.
+Vivid colors with a clear primary focal area and quieter supporting colors. Build a
+readable action scene with connected props; do not shrink everything into a tiny
+isolated icon. Keep important faces, hands, sunglasses, labels and contact points
+fully visible. No realistic anatomy, photo texture, 3D, heavy gradients or cinematic
+lighting. No narration subtitles, timestamps, real logos, extra labels or
+decorative objects.
 ```
 
 接着给出：
 
-1. **涉及的连续性**：本镜实际出现的角色、设备、场地和状态；独立环境/物件镜头无需加载全片角色设定。
+1. **涉及的连续性**：以 `Cast in this frame` 列出本镜实际出现的角色（固定角色外观见 [角色与画风](characters.md)）及其动作、表情和墨镜样式，再加设备、场地和状态；独立环境/物件镜头写 `none`，无需加载全片角色设定。
 2. **具体构图**：主体位置/大小、动作或状态、作用对象、注意中心和环境；有人物时说明其主辅作用与面积关系。
 3. **色彩关系**：哪块是主色，哪块退后，强调色指向哪里。
 4. **画内准确文字**：逐字列出；没有就写 NONE。
 5. **旁白语境**：只为理解含义，不印进图片。
 6. **必要事实边界**：把“可能”“模型比较”“示意”转化为相应标签/构图。
-7. **参考角色**：参考图只锁定线条、颜色或角色身份；新镜头不复制旧场景。
+7. **参考角色**：参考图只锁定线条、颜色或角色身份；新镜头不复制旧场景。默认把 `assets/wallstreet-cast/` 的角色表作为风格/角色参考传入。
 
 不要把所有片段涉及的角色或科学约束塞入每张图，以免引入无关对象；只加入当前帧需要的事实条件。少量关键排除项足够。不可将“长负面提示一定导致反向出图”写成未经验证的技术规律。
 
