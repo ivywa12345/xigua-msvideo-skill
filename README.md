@@ -1,10 +1,10 @@
 # xigua-msvideo-skill
 
-一套面向 **Codex** 的 YouTube 知识视频制作技能：从选题、英文口播和中文审稿，到配音、时间戳分镜、MS Paint 粗绘图片与 MP4 合成。
+一套面向 **Codex** 的 YouTube 知识视频制作技能：从选题、英文口播和中文审稿，到配音、时间戳分镜、Q 版卡通图片与 MP4 合成。
 
-**Codex skills for research-backed curiosity stories, MS Paint storyboards, and narrated videos.**
+**Codex skills for research-backed curiosity stories, cartoon storyboards, and narrated videos.**
 
-可以从头制作一期，也可以带着定稿、配音或图片从中间继续。默认中文沟通、英文口播、白底粗黑线和平涂画面；语言、时长、风格以本次要求为准。
+可以从头制作一期，也可以带着定稿、配音或图片从中间继续。默认中文沟通、英文口播、白底手绘 Q 版卡通画面（华尔街男、哈士奇、橘猫）；语言、时长、风格以本次要求为准。
 
 > 这是供 AI 助手执行的技能包。文本研究和生图需要宿主提供相应工具；仓库中的 Python 脚本负责配音、素材检查与本地合成，没有独立的一键全自动生图服务。
 
@@ -14,18 +14,21 @@
 | --- | --- | --- |
 | [`xigua-msvideo-skill`](skills/xigua-msvideo-skill/SKILL.md) | 六阶段统筹、素材交接、进度续作、配音与合成 | “完成这期视频”或“从现有音频继续” |
 | [`youtube-curiosity-stories`](skills/youtube-curiosity-stories/SKILL.md) | 选题、查证、完整口播、中英文同步修改 | “先给选题”或“根据中文修改英文” |
-| [`youtube-ms-paint-images`](skills/youtube-ms-paint-images/SKILL.md) | 时间戳分镜、粗绘提示词、独立配图和逐帧核对 | “先做分镜”或“按确认的分镜生成图片” |
+| [`youtube-ms-paint-images`](skills/youtube-ms-paint-images/SKILL.md) | 时间戳分镜、卡通提示词、独立配图和逐帧核对 | “先做分镜”或“按确认的分镜生成图片” |
 
 全流程依次交付：**选题 → 文案 → 配音 → 时间戳分镜 → 独立图片 → MP4**。
 
 ## 画面示例
 
-| 人物与动作 | 拟人机制图 |
-| --- | --- |
-| ![人物推介空气](skills/youtube-ms-paint-images/assets/frame-007_00m11s839ms.png) | ![肺寻找氧气](skills/youtube-ms-paint-images/assets/frame-011_00m20s193ms.png) |
-| ![微生物共享场景](skills/youtube-ms-paint-images/assets/frame-119_03m57s746ms.png) | ![研究者操作装置](skills/youtube-ms-paint-images/assets/frame-182_06m01s361ms.png) |
+默认画风：白底手绘 Q 版卡通，三位固定角色贯穿全片：戴墨镜的**华尔街男**、吐舌头的**哈士奇**、淡定的**橘猫**。墨镜样式随情绪变化（$ 钱眼、星星、爱心、螺旋、火焰……）。不画火柴人。
 
-样图用于说明人物主次、动作和配色；题材与角色可以改变。文件名保留示例的原始估算时间，不能当作新项目的真实配音时码。样图接近 16:9，合成时等比补白到指定尺寸。具体说明见[示例文档](skills/youtube-ms-paint-images/references/ancient-earth-example.md)。
+| 情绪与动作 | 墨镜变化 |
+| --- | --- |
+| ![情绪与动作表](skills/youtube-ms-paint-images/assets/wallstreet-cast/cast-sheet-moods.png) | ![墨镜变化表](skills/youtube-ms-paint-images/assets/wallstreet-cast/cast-sheet-sunglasses.png) |
+
+这两张是角色与画风参考表，生图时作为风格/角色参考传入；每张新图仍按自己的分镜画动作和构图。角色设定见 [角色与画风](skills/youtube-ms-paint-images/references/characters.md)。
+
+技能目录名 `youtube-ms-paint-images` 为兼容旧调用保留；早期火柴人 MS Paint 示例仍在 `assets/` 根目录（测试会用到），说明见[旧画风示例](skills/youtube-ms-paint-images/references/ancient-earth-example.md)，不再作为画风参考。
 
 ## 安装到 Codex
 
@@ -67,7 +70,7 @@ python scripts/install.py --destination "/path/to/skills"
 ```text
 使用 $xigua-msvideo-skill，围绕“为什么人很难记住婴儿时期的事情”制作一期视频。
 先核查资料，再写英文口播和中文审稿版。
-文案先给我审阅；确认后使用我的配音，制作白底 MS Paint 粗绘分镜和成片。
+文案先给我审阅；确认后使用我的配音，制作白底华尔街男与猫狗卡通分镜和成片。
 ```
 
 ### 从已有素材继续
